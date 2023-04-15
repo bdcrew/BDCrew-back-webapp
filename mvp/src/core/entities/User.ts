@@ -5,6 +5,7 @@ export class User {
   phone: number;
   token: string;
   createAt: string;
+  updateAt: string;
 
   constructor(
     id: string,
