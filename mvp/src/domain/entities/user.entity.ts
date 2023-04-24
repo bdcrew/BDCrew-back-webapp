@@ -1,23 +1,26 @@
-export class UserEntity {
-  id: string;
-  nickName: string;
-  password: string;
-  phone: number;
-  token: string;
-  createAt: string;
-  updateAt: string;
+import { Entity } from 'typeorm';
+import { Column, PrimaryColumn } from 'typeorm/browser';
 
-  constructor(
-    id: string,
-    nickName: string,
-    password: string,
-    phone: number,
-    token: string,
-  ) {
-    this.id = id;
-    this.nickName = nickName;
-    this.password = password;
-    this.phone = phone;
-    this.token = token;
-  }
+@Entity()
+export class UserEntity {
+  @PrimaryColumn('uuid', { comment: '유저 id' })
+  id: string;
+
+  @Column('varchar', { length: 100, comment: '이메일' })
+  email: string;
+
+  @Column('varchar', { length: 150, comment: '비밀번호' })
+  password: string;
+
+  @Column('int')
+  phone: number;
+
+  @Column()
+  token: string;
+
+  @Column()
+  created: Date;
+
+  @Column()
+  updated: Date;
 }
