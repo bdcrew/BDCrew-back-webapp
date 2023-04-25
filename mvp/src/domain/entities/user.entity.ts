@@ -12,15 +12,15 @@ export class UserEntity {
   @Column('varchar', { length: 150, comment: '비밀번호' })
   password: string;
 
-  @Column('int')
+  @Column('int', { comment: '전화번호' })
   phone: number;
 
-  @Column()
+  @Column('varchar', { length: 150, comment: '토큰' })
   token: string;
 
-  @Column()
+  @Column('datetime', { comment: '생성날짜' })
   created: Date;
 
-  @Column()
+  @Column('datetime', { comment: '수정날짜' })
   updated: Date;
 }
