@@ -15,11 +15,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       logging: true,
-      synchronize: true, // todo: 추후에 synchronzie 해제
+      synchronize: true,
       autoLoadEntities: true,
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}
