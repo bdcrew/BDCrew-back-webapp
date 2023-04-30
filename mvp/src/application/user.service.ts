@@ -9,4 +9,14 @@ export class UserService {
     @InjectRepository(UserEntity)
     private userRepository: Repository<UserEntity>,
   ) {}
+
+  async findEmailOne(email: string): Promise<> {
+    return this.userRepository.findOne({
+      where: {
+        email: email,
+      },
+    });
+  }
+
+  async findAll();
 }
