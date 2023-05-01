@@ -10,7 +10,7 @@ export class UserService {
     private userRepository: Repository<UserEntity>,
   ) {}
 
-  async findEmailOne(email: string): Promise<> {
+  async findEmailOne(email: string): Promise<UserEntity> {
     return this.userRepository.findOne({
       where: {
         email: email,
@@ -18,5 +18,5 @@ export class UserService {
     });
   }
 
-  async findAll();
+  async createUser(): Promise<UserEntity> {}
 }
