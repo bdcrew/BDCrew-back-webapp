@@ -3,7 +3,7 @@ import { Column, PrimaryColumn } from 'typeorm/browser';
 
 @Entity()
 export class UserEntity {
-  @PrimaryColumn('uuid', { comment: '유저 id' })
+  @PrimaryColumn('uuid', { comment: '유저 id' }
   id: string;
 
   @Column('varchar', { length: 100, comment: '이메일' })
